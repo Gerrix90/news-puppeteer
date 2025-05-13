@@ -1,6 +1,14 @@
 # news-puppeteer
 
-A simple Node.js script that uses Puppeteer to scrape news articles from specified websites.
+A Node.js application that scrapes TechCrunch AI category articles using Puppeteer. The script fetches the RSS feed, filters articles published today, and extracts their title and content.
+
+## Features
+
+- Fetches the latest AI news articles from TechCrunch
+- Filters articles to only show those published today
+- Uses Puppeteer for reliable content extraction
+- Handles various page layouts and article formats
+- Outputs clean JSON with article title, content, and URL
 
 ## Prerequisites
 
@@ -18,13 +26,27 @@ npm install
 ## Usage
 
 ```bash
-# Run the scraper
+# Run the scraper with npm
+npm start
+
+# Or directly with Node
 node scraper.js
 ```
 
 ## Configuration
 
-You can adjust the target URL and output settings in `scraper.js` as needed.
+You can modify the following in `scraper.js`:
+
+- RSS feed URL (currently set to TechCrunch AI category)
+- Article filtering criteria (currently set to today's date)
+- Content selectors for different page layouts
+- Output format
+
+## Dependencies
+
+- Puppeteer - Headless Chrome browser automation
+- Axios - HTTP client for fetching RSS feeds
+- xml2js - XML parser for processing RSS data
 
 ## Contributing
 
